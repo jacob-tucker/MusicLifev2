@@ -2,7 +2,7 @@
 
 This application is a complete design overhaul of MusicLife, which is a social media platform for people who love music. The original MusicLife application can be found here, https://musiclife.netlify.app/. The github repository can be found here: https://github.com/jacob-tucker/MusicLife.
 
-MusicLifev2, which features similar functional components to MusicLife but offers a complete redesign can be found here: [link](https://musiclifev2.netlify.app/){:target="_blank"}
+MusicLifev2, which features similar functional components to MusicLife but offers a complete redesign can be found here: https://musiclifev2.netlify.app/
 
 The functional components will be explained below, some of which are new.
 
