@@ -1,0 +1,225 @@
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 75px;
+    display: grid;
+    grid-template-columns: 40% auto 40%;
+    overflow-x: hidden;
+    background: rgb(241, 82, 82);
+}
+
+.hamburger, .ex {
+    position: relative;
+    display: none;
+    margin: 0;
+    top: 0;
+    height: 75px;
+    padding: 0px;
+}
+
+.hamburger span, .ex span {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: white;
+}
+
+.hamburger span:nth-child(1) {
+    top: 40%;
+    left: 50%;
+}
+
+.hamburger span:nth-child(2) {
+    top: 50%;
+    left: 50%;
+}
+
+.hamburger span:nth-child(3) {
+    top: 60%;
+    left: 50%;
+}
+
+.red{
+    background: red;
+}
+
+.green {
+    background: #1DB954;
+}
+
+.orange {
+    background: #FE5000;
+}
+
+.nodisplay {
+    display: none;
+}
+
+.navbar a {
+    text-shadow: none;
+}
+
+.navbar .leftSide, .navbar .centerSide, .navbar .hamburger, .navbar .ex {
+    text-align: center;
+    padding: 5px;
+}
+
+.navbar .rightSide {
+    text-align: center;
+    padding: 5px;
+}
+
+.navbar .leftSide a, .navbar .rightSide a {
+    position: relative;
+    margin: 0px 20px;
+}
+
+.navbar .leftSide a span, .navbar .rightSide a span {
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: white;
+}
+
+.navbar .leftSide a:hover span, .navbar .rightSide a:hover span{
+    animation: bottomThing 1s forwards;
+}
+
+@keyframes bottomThing {
+    0%{
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.navbar .centerSide a{
+    font-size: 40px;
+}
+
+.navbar .rightSide #initials {
+    border-radius: 100%;
+    background: white;
+    color: pink;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.libraryWhite {
+    background: white;
+}
+
+@media all and (max-width: 1100px) {
+    .navbar {
+        grid-template-columns: 40% auto 40%;
+    }
+    .leftSide {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .ex {
+        display: block;
+    }
+}
+
+@media all and (max-width: 700px) {
+    .navbar {
+        grid-template-columns: 30% auto 50%;
+    }
+    .navbar .rightSide {
+        text-align: center;
+    }
+    .navbar .centerSide, .navbar .rightSide {
+        padding: 9px;
+    }
+}
+
+@media all and (max-width: 550px) {
+    .navbar .rightSide {
+        text-align: left;
+    }
+}
+
+.sideBar {
+    position: absolute;
+    top: 75px;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    width: 35%;
+    height: calc(100% - 75px);
+    background: rgb(241, 82, 82);
+    z-index: 50;
+    animation: slideInISlideOutYuh 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sideBar a {
+    position: relative;
+    margin: 20px 0px;
+    color: white;
+    font-size: 20px;
+}
+
+@keyframes slideInISlideOutYuh {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 35%;
+    }
+}
+
+.sideBar a span {
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: white;
+}
+
+.sideBar a:hover span {
+    animation: bottomThing 1s forwards;
+}
+
+.ex span:nth-child(1) {
+    top: 40%;
+    left: 50%;
+}
+
+.ex span:nth-child(2) {
+    top: 50%;
+    left: 50%;
+    animation: secondSpan 1s forwards;
+}
+
+@keyframes secondSpan {
+    100% {
+        width: 10px;
+    }
+}
+
+.ex span:nth-child(3) {
+    top: 60%;
+    left: 50%;
+    animation: thirdSpan 1s forwards;
+}
+
+@keyframes thirdSpan {
+    100% {
+        width: 5px;
+    }
+}
+
+
+

@@ -1,0 +1,274 @@
+.songdetail {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  height: 90%;
+  width: 100%;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.songPlatform {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 100%;
+  
+}
+
+.youtubeSongDescription, .spotifySongDescription, .soundcloudSongDescription {
+  margin-left: 50px;
+}
+
+.youtubeSongDescription #songname {
+  color: red;
+  font-size: 30px;
+}
+
+.spotifySongDescription #songname {
+  color: #1DB954;
+  font-size: 30px;
+}
+
+.soundcloudSongDescription #songname {
+  color: #FE5000;
+  font-size: 30px;
+}
+
+.youtubeSongDescription #artistname {
+  color: black;
+  margin-bottom: 15px;
+}
+
+.spotifySongDescription #artistname {
+  color: black;
+  margin-bottom: 15px;
+}
+
+.soundcloudSongDescription #artistname {
+  color: black;
+  margin-bottom: 15px;
+}
+
+.youtubeSongDescription .specialbutton button {
+  background-color: red;
+}
+
+.spotifySongDescription .specialbutton button {
+  background-color: #1DB954;
+}
+
+.soundcloudSongDescription .specialbutton button {
+  background-color: #FE5000;
+}
+
+/*
+The transition will be applied to any effects on this button
+*/
+.specialbutton button{
+  min-width: 100px;
+  margin-right: 10px;
+  height: 0px;
+  line-height: 0px;
+  padding: 20px 20px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  transition: 1s;
+}
+
+/* NOTE: This reaches the outer page because we never specify a position in any of the parent
+elements until that one :) -- Cool trick! */
+.specialbutton button:hover span{
+  position: absolute;
+}
+
+.youtubeSongDescription .specialbutton button:hover span:nth-child(1) {
+  background: red;
+}
+
+.spotifySongDescription .specialbutton button:hover span:nth-child(1) {
+  background: #1DB954;
+}
+
+.soundcloudSongDescription .specialbutton button:hover span:nth-child(1) {
+  background: #FE5000;
+}
+
+.specialbutton button:hover span:nth-child(1){
+  width: 100%;
+  height: 2px;
+  top: 0px;
+  left: -100%;
+  animation: run1 linear infinite;
+  animation-duration: 2s;
+  animation-delay: .5s;
+}
+
+
+@keyframes run1{
+  0%{
+    left: -100%;
+  }
+  100%{
+    left: 100%;
+  }
+}
+
+.youtubeSongDescription .specialbutton button:hover span:nth-child(2) {
+  background: red;
+}
+
+.spotifySongDescription .specialbutton button:hover span:nth-child(2) {
+  background: #1DB954;
+}
+
+.soundcloudSongDescription .specialbutton button:hover span:nth-child(2) {
+  background: #FE5000;
+}
+
+.specialbutton button:hover span:nth-child(2){
+  width: 2px;
+  height: 100%;
+  top: -100%;
+  right: 0px;
+  animation: run2 linear infinite;
+  animation-duration: 2s;
+  animation-delay: 1.5s;
+}
+
+
+@keyframes run2{
+  0%{
+    top: -100%;
+  }
+  100%{
+    top: 100%;
+  }
+}
+
+.youtubeSongDescription .specialbutton button:hover span:nth-child(3) {
+  background: red;
+}
+
+.spotifySongDescription .specialbutton button:hover span:nth-child(3) {
+  background: #1DB954;
+}
+
+.soundcloudSongDescription .specialbutton button:hover span:nth-child(3) {
+  background: #FE5000;
+}
+
+.specialbutton button:hover span:nth-child(3){
+  width: 100%;
+  height: 2px;
+  bottom: 0px;
+  left: 100%;
+  animation: run3 linear infinite;
+  animation-duration: 2s;
+  animation-delay: 2.5s;
+}
+
+
+@keyframes run3{
+  0%{
+    left: 100%;
+  }
+  100%{
+    left: -100%;
+  }
+}
+
+.youtubeSongDescription .specialbutton button:hover span:nth-child(4) {
+  background: red;
+}
+
+.spotifySongDescription .specialbutton button:hover span:nth-child(4) {
+  background: #1DB954;
+}
+
+.soundcloudSongDescription .specialbutton button:hover span:nth-child(4) {
+  background: #FE5000;
+}
+
+.specialbutton button:hover span:nth-child(4){
+  width: 2px;
+  height: 100%;
+  left: 0px;
+  top: 100%;
+  animation: run4 linear infinite;
+  animation-duration: 2s;
+  animation-delay: 3.5s;
+}
+
+
+@keyframes run4{
+  0%{
+    top: 100%;
+  }
+  100%{
+    top: -100%;
+  }
+}
+
+@media all and (max-width: 540px) {
+  .songdetail {
+    flex-direction: column;
+  }
+  .youtubeSongDescription, .spotifySongDescription, .soundcloudSongDescription {
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.songDetailAdd {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  animation: moving 1s ease-out;
+}
+
+.dontDisplay {
+  display: none;
+}
+
+.songDetailAdd h4 {
+  color: rgb(248, 98, 131);
+  width: 400px;
+}
+
+.songDetailAdd button {
+  width: 70px;
+  height: 40px;
+  border: 0;
+  background: rgb(248, 98, 131);
+  border-radius: 5px;
+  color: white;
+}
+
+#cancelled {
+  position: relative;
+  margin-left: 10px;
+  background: lightgrey;
+}
+
+#plsHelper {
+  position: relative;
+  border: 0;
+  transition: none;
+  box-shadow: none;
+}

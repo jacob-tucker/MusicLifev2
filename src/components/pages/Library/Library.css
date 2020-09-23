@@ -1,0 +1,247 @@
+.library {
+  position: absolute;
+  top: 75px;
+  width: 100%;
+  height: 90%;
+  left: 0;
+  overflow-x: hidden;
+}
+
+#playlists{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 350px;
+  background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+  z-index: 3;
+}
+
+.underline {
+  position: absolute;
+  top: 60px;
+  width: 80%;
+  height: 1px;
+}
+
+#playlists .underline {
+  background: white;
+  left: 10%;
+}
+
+.playlistList {
+  position: absolute;
+  top: 75px;
+  width: calc(100vw - 20%);
+  height: 250px;
+  left: 10%;
+  margin: 0;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.aPlaylist {
+  position: relative;
+  min-width: 200px;
+  min-height: 200px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.playlistCover {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.playlistInfo {
+  position: absolute;
+  top: 140px;
+  margin: 0;
+  padding: 0;
+}
+
+.playlistInfo p {
+  text-shadow: none;
+  font-size: 30px;
+  color: white;
+}
+
+#playlists-title, #songs-title{
+  position: relative;
+  top: 10px;
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  font-family: Helvetica;
+}
+
+#playlists-title {
+  position: relative;
+  left: 10%;
+  color: white;
+}
+
+#playlists-creation {
+  position: absolute;
+  right: 10%;
+  top: 25px;
+  font-size: 25px;
+  background: 0;
+  outline: 0;
+  border: 0;
+  color: rgb(243, 82, 109);
+  font-family: Helvetica;
+  background: white;
+  border-radius: 100px;
+}
+
+#songs-title {
+  color: black;
+  margin-bottom: 25px;
+}
+
+.librarySongs {
+  position: absolute;
+  top: 350px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 3;
+}
+
+.librarySongs .underline {
+  background: black;
+  width: 100%;
+}
+
+.librarySongsList {
+  position: relative;
+  left: 10%;
+  width: 80%;
+  top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.songInLibrary {
+  position: relative;
+  width: 100%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+}
+
+.songInLibraryInfo p {
+  padding: 0;
+  margin: 0;
+}
+
+.songInLibraryInfo p:nth-child(1) {
+  color: rgb(248, 98, 131);
+  font-size: 20px;
+}
+
+.youtubeSong, .spotifySong, .soundcloudSong {
+  position: absolute;
+  text-shadow: none;
+  font-size: 20px;
+  left: 55%;
+  top: 45%;
+}
+
+.youtubeSong {
+  color: red;
+}
+
+.spotifySong {
+  color: #1DB954;
+}
+
+.soundcloudSong {
+  color: #FE5000;
+}
+
+.animate {
+  right: 0;
+  margin: 0px 50px;
+  background: none;
+  border: 0;
+  outline: 0;
+}
+
+.one {
+  position: absolute;
+  left: 82.5%;
+  color: rgb(248, 98, 131);
+  font-size: 40px;
+}
+
+.two {
+  position: absolute;
+  left: 90%;
+  color: rgb(248, 98, 131);
+  font-size: 40px;
+}
+
+.one:focus, .two:focus {
+  background: none;
+}
+
+.adding {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  animation: moving 1s ease-out;
+}
+
+.noodisplaying {
+  display: none;
+}
+
+@keyframes moving {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.adding h4 {
+  color: rgb(248, 98, 131);
+}
+
+.adding button {
+  width: 70px;
+  height: 40px;
+  border: 0;
+  background: rgb(248, 98, 131);
+  border-radius: 5px;
+  color: white;
+}
+
+#canceled {
+  position: relative;
+  margin-left: 10px;
+  background: lightgrey;
+}
+
+#plsHelp {
+  position: relative;
+  border: 0;
+  transition: none;
+  box-shadow: none;
+}

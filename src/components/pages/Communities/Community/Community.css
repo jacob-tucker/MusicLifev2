@@ -1,0 +1,282 @@
+.communityPage{
+  position: absolute;
+  top: 75px;
+  width: 100%;
+  height: 90%;
+  overflow-x: hidden;
+}
+
+.communityPagePosts {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60%;
+  z-index: 1;
+}
+
+.communityPage-title {
+  position: relative;
+  top: 40px;
+  left: 5%;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-size: 30px;
+  font-family: Helvetica;
+}
+
+.communityPagePosts-post {
+  position: absolute;
+  top: 45px;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  border: 0;
+  outline: 0;
+  right: 5%;
+  color: white;
+  font-size: 20px;
+  font-family: Helvetica;
+}
+
+.underlining {
+  position: absolute;
+  background: black;
+  top: 75px;
+  width: 90%;
+  left: 5%;
+  height: 1px;
+}
+
+.communityPageSongs {
+  position: absolute;
+  left: 60%;
+  top: 0;
+  width: 40%;
+  z-index: 1;
+}
+
+.communityPagePostsList {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  top: 60px;
+}
+
+.communityPageSongsList {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  top: 62.5px;
+  overflow-x: hidden;
+}
+
+.post, .post2 {
+  color: white;
+  margin: 5px 0px;
+  position: relative;
+  width: 90%;
+  left: 5%;
+  border-radius: 5px;
+  padding: 0;
+}
+
+.post p, .post2 p {
+  position: relative;
+  left: 5%;
+  width: 90%;
+  z-index: 0;
+}
+
+.post{
+  background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+}
+
+.post2 {
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+.aSong {
+  position: relative;
+  margin-bottom: 5px;
+  left: 5%;
+  width: 90%;
+  margin: 0;
+  padding: 0;
+}
+
+.package {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  line-height: 0px;
+}
+
+.package h5 {
+  position: relative;
+  margin: 0;
+  color: rgb(248, 98, 131);
+  width: 350px;
+}
+
+#button-shit {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  top: -2.5px;
+  border: none;
+  background: none;
+  font-size: 30px;
+  color: white;
+  left: 25px;
+}
+
+.arrowleft, .arrowleft2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px; 
+  height: 100%; 
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent; 
+  display: none;
+}
+
+.arrowleft {
+  border-right: 50px solid grey; 
+}
+
+.arrowleft2 {
+  border-right: 50px solid lightgrey; 
+}
+
+.post:hover .arrowleft, .post:hover .arrowleft2, .post2:hover .arrowleft, .post2:hover .arrowleft2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.postingA {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  animation: moving 1s ease-out;
+}
+
+.noDisplay {
+  display: none;
+}
+
+@keyframes moving {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.postingA h4 {
+  color: rgb(248, 98, 131);
+}
+
+.postingA button {
+  width: 70px;
+  height: 40px;
+  border: 0;
+  background: rgb(248, 98, 131);
+  border-radius: 5px;
+  color: white;
+}
+
+#canceled {
+  position: relative;
+  margin-left: 10px;
+  background: lightgrey;
+}
+
+#plsHelp4 {
+  position: relative;
+  border: 0;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  border-radius: 5px; 
+  color: darkgray;
+  height: 200px;
+  padding: 0;
+  outline: 0;
+  padding: 10px;
+  transition: none;
+  box-shadow: none;
+}
+
+.youtubeSongCommunity, .spotifySongCommunity, .soundcloudSongCommunity {
+  position: absolute;
+  text-shadow: none;
+  font-size: 20px;
+  left: 75%;
+  top: 30%;
+}
+
+.youtubeSongCommunity {
+  color: red;
+}
+
+.spotifySongCommunity {
+  color: #1DB954;
+}
+
+.soundcloudSongCommunity {
+  color: #FE5000;
+}
+
+@media all and (max-width: 1000px) {
+  .communityPagePosts {
+    position: absolute;
+    width: 75%;
+    left: 12.5%;
+  }
+
+  .communityPagePostsList {
+    position: relative;
+    height: 520px;
+    overflow-y: scroll;
+  }
+
+  .communityPageSongs {
+    position: absolute;
+    width: 75%;
+    left: 12.5%;
+    top: 625px;
+    height: 620px;
+    border: solid 2px black;
+    border-bottom: none;
+    border-radius: 5px 5px 0px 0px;
+  }
+
+  .communityPageSongsList {
+    overflow-y: scroll;
+    height: 520px;
+  }
+
+  .package h5 {
+    width: 200px;
+  }
+
+  .youtubeSongCommunity, .spotifySongCommunity, .soundcloudSongCommunity {
+    left: 70%;
+  }
+}

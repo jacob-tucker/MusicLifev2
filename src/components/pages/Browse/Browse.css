@@ -1,0 +1,264 @@
+.transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: removed 3.75s forwards linear;
+}
+
+@keyframes removed {
+  100% {
+    z-index: -1;
+  }
+}
+
+.slider {
+  position: absolute;
+  transform: translateY(100vh);
+  left: 0;
+  width: 100vw;
+  height: 125vh;
+  background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+  animation: slider 1s forwards linear;
+  animation-delay: 3s;
+  z-index: 30;
+}
+
+@keyframes slider {
+  0% {
+
+  }
+  100% {
+    transform: translateY(-150vh);
+    display: none;
+  }
+}
+
+.transition h2:nth-child(1) span{
+  animation: intro1 .5s forwards linear;
+  animation-delay: 1s;
+}
+
+.transition h2:nth-child(2) span{
+  animation: intro1 .5s forwards linear;
+  animation-delay: 1.25s;
+}
+
+.transition h2:nth-child(3) span{
+  animation: intro1 .5s forwards linear;
+  animation-delay: 1.5s;
+}
+
+@keyframes intro1 {
+  0% {
+
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.transition h2{
+  color: #fc6076;
+  font-family: sans-serif;
+  font-size: 3rem;
+  overflow: hidden;
+}
+
+.transition h2 span{
+  display: inline-block;
+  transform: translateY(100%);
+}
+
+.browsetab{
+  position: absolute;
+  top: 75px;
+  width: 100%;
+  height: 90%;
+}
+
+.browsetab h3 {
+  color: rgb(231, 224, 224);
+}
+
+.latesttrack {
+  position: absolute;
+  padding: 20px;
+  text-align: center;
+  width: 33%;
+  top: 0;
+  height: 100%;
+  filter: grayscale(75%);
+  color: #03e9f4;
+}
+
+.latesttrack img, .hottesttrack img, .popcommunity img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.latesttrack:hover, .hottesttrack:hover, .popcommunity:hover {
+  animation: uncover .5s forwards;
+}
+
+@keyframes uncover {
+  100% {
+    filter: grayscale(0%);
+  }
+}
+
+.hottesttrack {
+  position: absolute;
+  text-align: center;
+  padding: 20px;
+  width: 34%;
+  left: 33%;
+  height: 100%;
+  top: 0;
+  color: red;
+  filter: grayscale(75%);
+}
+
+.popcommunity {
+  position: absolute;
+  text-align: center;
+  padding: 20px;
+  top: 0px;
+  left: 67%;
+  height: 100%;
+  width: 33%;
+  color: lightgreen;
+  filter: grayscale(75%);
+}
+
+.browse{
+  background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+
+.browse .youtube {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  display: flex;
+}
+
+.browse .spotify {
+  position: absolute;
+  top: 250px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+  display: flex;
+}
+
+.browse .soundcloud {
+  position: absolute;
+  top: 450px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+  display: flex;
+}
+
+.youtubeBeginners, .spotifyBeginners, .soundcloudBeginners {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 200px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.youtubeTitle {
+  position: absolute;
+  left: 0;
+  margin: 10px 0px;
+  transform: rotate(-90deg);
+  color: red;
+  font-size: 40px;
+}
+
+.spotifyTitle {
+  position: absolute;
+  left: 10px;
+  margin: 10px 0px;
+  transform: rotate(-90deg);
+  color: white;
+  font-size: 40px;
+}
+
+.soundcloudTitle {
+  position: absolute;
+  left: -10px;
+  margin: 10px 0px;
+  transform: rotate(-90deg);
+  color: white;
+  font-size: 30px;
+}
+
+.youtubeSlash {
+  position: absolute;
+  height: 100px;
+  width: 2px;
+  left: 100px;
+  background: red;
+}
+
+.spotifySlash, .soundcloudSlash {
+  position: absolute;
+  height: 100px;
+  width: 2px;
+  left: 100px;
+  background: white;
+}
+
+.youtubeSongs, .spotifySongs, .soundcloudSongs {
+  position: absolute;
+  left: 150px;
+  display: flex;
+  margin: 0;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: calc(100vw - 150px);
+}
+
+.songLister {
+  position: relative;
+  margin: 0px 10px;
+}
+
+#searcher {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+  background-blend-mode: multiply;
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  font-family: Cambria;
+}

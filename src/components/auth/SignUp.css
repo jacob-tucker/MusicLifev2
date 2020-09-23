@@ -1,0 +1,89 @@
+.signUpMain {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.signUp {
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    height: 75%;
+    top: 5%;
+}
+
+.signUp h5 {
+    text-align: center;
+    font-weight: bold;
+    color: rgb(248, 98, 131);
+}
+
+.signUpEmail, .signUpPassword, .signUpOther {
+    position: relative;
+    top: 50px;
+    width: 70%;
+    left: 15%;
+}
+
+.signUpLogin, .signUpAccountAlready {
+    position: relative;
+    top: 75px;
+    width: 70%;
+    left: 15%;
+}
+
+.signUpAccountAlready {
+    display: flex;
+    align-items: center;
+}
+
+.signUpAccountAlready a {
+    margin-left: 7.5px;
+}
+
+.signUpEmail label, .signUpPassword label, .signUpOther label {
+    color: darkgrey;
+    font-size: 20px;
+}
+
+.signUpEmail input, .signUpPassword input, .signUpOther input {
+    outline: 0;
+    border-radius: 10px;
+    padding: 0px 5px;
+    color: rgb(248, 98, 131);
+}
+
+.signUpLogin button {
+    background: rgb(248, 98, 131);
+    border-radius: 80px;
+    padding: 10px 20px;
+    outline: 0;
+    border: 0;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.SignUpImages {
+    position: absolute;
+    left: 70%;
+    transform: rotateZ(55deg);
+}
+
+.SignUpImages img {
+    width: 1500px;
+}
+
+.SignUpImages2 {
+    position: absolute;
+    top: 80%;
+    left: -800px;
+    transform: rotateZ(55deg);
+}
+
+.SignUpImages2 img {
+    width: 1500px;
+}

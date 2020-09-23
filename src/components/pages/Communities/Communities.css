@@ -1,0 +1,267 @@
+.communitiesList {
+  position: absolute;
+  top: 75px;
+  width: 100%;
+  height: 350px;
+  background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+  overflow-x: hidden;
+}
+
+.communities-title {
+  position: relative;
+  top: 20px;
+  margin: 0;
+  padding: 0;
+  font-size: 35px;
+  font-family: Helvetica;
+  color: white;
+  left: 10%;
+}
+
+#community-creation {
+  position: absolute;
+  right: 10%;
+  top: 30px;
+  font-size: 20px;
+  background: 0;
+  outline: 0;
+  border: 0;
+  color: rgb(243, 82, 109);
+  font-family: Helvetica;
+  background: white;
+  border-radius: 100px;
+}
+
+.communitiesList .underliner, .suggestedCommunitiesList .underliner {
+  position: absolute;
+  top: 60px;
+  left: 10%;
+  width: 80%;
+  height: 1px;
+}
+
+.communitiesList .underliner {
+  background: white;
+}
+
+.suggestedCommunitiesList .underliner {
+  background: black;
+}
+
+.theCommunities {
+  position: absolute;
+  top: 75px;
+  width: calc(100vw - 20%);
+  height: 250px;
+  left: 10%;
+  margin: 0;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.aCommunity {
+  position: relative;
+  min-width: 300px;
+  min-height: 200px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.communityCover {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.communityInfo {
+  position: absolute;
+  margin: 10px;
+  padding: 0;
+  color: white;
+  font-size: 40px;
+}
+
+.suggestedCommunitiesList {
+  position: absolute;
+  top: calc(10% + 350px);
+  width: 100%;
+}
+
+.suggested-communities-title {
+  position: absolute;
+  top: 20px;
+  left: 10%;
+  margin: 0;
+  padding: 0;
+  font-size: 35px;
+  font-family: Helvetica;
+  color: black;
+}
+
+.suggestedCommunitiesLister {
+  position: relative;
+  width: 80%;
+  left: 10%;
+  top: 75px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.suggestedCommunity {
+  position: relative;
+  min-width: 400px;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 40px;
+}
+
+.suggestedCommunity:hover .suggestedCommunityCover {
+  animation: shadow 1s forwards;
+}
+
+.suggestedCommunity:hover .suggestedCommunityName {
+  display: none;
+}
+
+@keyframes shadow {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .2;
+    transform: translateY(-10px);
+  }
+}
+
+.suggestedCommunityCover {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.suggestedCommunityInfo {
+  position: absolute;
+}
+
+.suggestedCommunityName {
+  color: white;
+  font-size: 40px;
+}
+
+.suggestedCommunityInterests {
+  display: none;
+  color:  #ff758c;
+  width: 80%;
+  left: 10%;
+  font-size: 20px;
+}
+
+.suggestedCommunity:hover .suggestedCommunityInterests {
+  position: relative;
+  display: block;
+  animation: movingAgain 1s forwards;
+}
+
+@keyframes movingAgain {
+  0% {
+
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.joinButton {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+  color: white;
+  outline: 0;
+  border: 0;
+  width: 50px;
+  height: 50px;
+  font-family: Helvetica;
+  border-bottom-right-radius: 10px;
+  display: none;
+}
+
+.suggestedCommunity:hover .joinButton {
+  display: block;
+  animation: movingAgain 1s forwards;
+}
+
+.adding {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+
+.buttonbaryuh {
+  animation: moving 1s ease-out;
+}
+
+.noodisplaying {
+  display: none;
+}
+
+@keyframes moving {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.adding h4 {
+  color: rgb(248, 98, 131);
+}
+
+.adding button {
+  width: 70px;
+  height: 40px;
+  border: 0;
+  background: rgb(248, 98, 131);
+  border-radius: 5px;
+  color: white;
+}
+
+#canceled {
+  position: relative;
+  margin-left: 10px;
+  background: lightgrey;
+}
+
+#plsHelp {
+  position: relative;
+  border: 0;
+  transition: none;
+  box-shadow: none;
+}
+
+.hideMe {
+  display: none;
+}
+

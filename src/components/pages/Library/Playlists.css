@@ -1,0 +1,32 @@
+.playlistPage {
+  position: absolute;
+  top: 75px;
+  width: 100%;
+}
+
+.playlistPageInfo {
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.playlistPageInfo h1 {
+  color: white;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica;
+}
+
+.librarySongsList2 {
+  position: relative;
+  left: 10%;
+  width: 80%;
+  top: 150px;
+  display: flex;
+  flex-direction: column;
+}
